@@ -118,6 +118,10 @@ class Model(object):
         model = Sequential()
         model.add(Dense(12, input_dim=7))
         model.add(Activation('relu'))
+        model.add(Dense(12))
+        model.add(Activation('relu'))
+        model.add(Dense(12))
+        model.add(Activation('relu'))
         model.add(Dense(1))
         model.add(Activation('sigmoid'))
 
@@ -125,8 +129,8 @@ class Model(object):
         model.compile(optimizer='rmsprop', loss='mse')
 
         # Train the model, iterating on the data in batches of 32 samples
-        model.fit(trainX.as_matrix(), trainY.as_matrix(), epochs=1, batch_size=32, validation_data=(cv_x.as_matrix(), cv_y.as_matrix()))
-        model.fit(trainX.as_matrix(), trainY.as_matrix(), epochs=1, batch_size=32)
+        model.fit(trainX.as_matrix(), trainY.as_matrix(), epochs=1, batch_size=512, validation_data=(cv_x.as_matrix(), cv_y.as_matrix()))
+        # model.fit(trainX.as_matrix(), trainY.as_matrix(), epochs=1, batch_size=512)
 
     @classmethod
     def walkforward_validation(cls, data, end_index, window=1, look_ahead_window=1):

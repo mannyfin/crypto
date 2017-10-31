@@ -1,6 +1,6 @@
 # crypto
 
-Applying some ML models to predict bitcoin prices
+Applying some ML models to predict bitcoin prices. This is super preliminary stuff.
 
 Data is taken here: https://www.kaggle.com/mczielinski/bitcoin-historical-data
 from Zielak. 
