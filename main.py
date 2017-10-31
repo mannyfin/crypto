@@ -25,8 +25,8 @@ data['Close'].fillna(method='ffill', inplace=True)
 # standardize the data
 df = (data - data.mean())/ data.std()
 
-lr = Model(df, 0.025).linear_regression()
-
+# lr = Model(df, 0.025).linear_regression()
+nn1 = Model(df, 0.025).nn_1_keras()
 print('hi')
 print('hi')
 print('hi')
